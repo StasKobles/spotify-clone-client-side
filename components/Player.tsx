@@ -72,7 +72,7 @@ const Player = () => {
         right={duration}
         onChange={changeCurrentTime}
       />
-      <VolumeUp style={{ marginLeft: "auto" }} />
+      <VolumeUp className={styles.songBar} />
       <TrackProgress left={volume} right={100} onChange={changeVolume} />
     </div>
   );
