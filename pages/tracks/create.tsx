@@ -16,7 +16,7 @@ const Create = () => {
   const artist = useInput("");
   const text = useInput("");
   const router = useRouter();
-  const next = () => {
+  const next = async () => {
     if (activeStep !== 2) {
       setActiveStep((prev) => prev + 1);
     } else {
@@ -26,10 +26,8 @@ const Create = () => {
       formData.append("artist", artist.value);
       formData.append("picture", picture);
       formData.append("audio", audio);
-      axios
-        .post("http://188.225.14.111:4200/" + "tracks", formData)
-        .then((resp) => router.push("/tracks"))
-        .catch((e) => console.log(e));
+      await axios.post("http://188.225.14.111:4200/" + "tracks", formData);
+      await router.push("/tracks");
     }
   };
   const back = () => {

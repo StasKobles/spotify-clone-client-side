@@ -13,9 +13,9 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import { styled, useTheme } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import { styled, useTheme } from "@mui/material/styles";
 import { useRouter } from "next/router";
 import * as React from "react";
 
@@ -24,7 +24,6 @@ const drawerWidth = 240;
 const menuItems = [
   { text: "Main", href: "/" },
   { text: "Track List", href: "/tracks" },
-  { text: "Albums list", href: "/albums" },
 ];
 
 interface AppBarProps extends MuiAppBarProps {

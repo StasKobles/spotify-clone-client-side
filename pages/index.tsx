@@ -6,7 +6,7 @@ const index = () => {
       <MainLayout>
         <div className="center">
           <h1>Welcome to my music pet project!</h1>
-          <h3>Here ypu can find best tracks ever or add them</h3>
+          <h3>Here you can find best tracks ever or add them</h3>
         </div>
         <style jsx>
           {`
