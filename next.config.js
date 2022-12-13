@@ -9,6 +9,6 @@ module.exports = nextConfig;
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["193.201.115.48"],
+    domains: ["188.225.14.111"],
   },
 };

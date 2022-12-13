@@ -32,7 +32,7 @@ const Player = () => {
   }, [active]);
   const setAudio = () => {
     if (active) {
-      audio.src = process.env.DB_HOST + active.audio;
+      audio.src = "http://188.225.14.111:4200/" + active.audio;
       audio.volume = volume / 100;
       audio.onloadedmetadata = () => setDuration(Math.ceil(audio.duration));
       audio.ontimeupdate = () => setCurrentTime(Math.ceil(audio.currentTime));
