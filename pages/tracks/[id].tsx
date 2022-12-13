@@ -5,12 +5,9 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-
-
 import { useInput } from "../../hooks/useInput";
 import MainLayout from "../../layouts/MainLayout";
 import { ITrack } from "../../types/track";
-
 
 const TrackPage = ({ serverTrack }: any) => {
   const [track, setTrack] = useState<ITrack>(serverTrack);
@@ -21,7 +18,7 @@ const TrackPage = ({ serverTrack }: any) => {
   const addComment = async () => {
     try {
       const response = await axios.post(
-        "http://193.201.115.48:4200/tracks/comment",
+        process.env.DB_HOST + "tracks/comment",
         {
           username: username.value,
           text: text.value,
@@ -49,7 +46,7 @@ const TrackPage = ({ serverTrack }: any) => {
       </Button>
       <Grid container marginTop={3}>
         <Image
-          src={"http://193.201.115.48:4200/" + track.picture}
+          src={process.env.DB_HOST + track.picture}
           width={200}
           height={200}
           alt={"track logo"}
@@ -84,7 +81,7 @@ export default TrackPage;
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const response = await axios.get(
-    "http://193.201.115.48:4200/tracks/" + params?.id
+    process.env.DB_HOST + "tracks/" + params?.id
   );
   return {
     props: {

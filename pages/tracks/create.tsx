@@ -27,7 +27,7 @@ const Create = () => {
       formData.append("picture", picture);
       formData.append("audio", audio);
       axios
-        .post("http://193.201.115.48:4200/tracks", formData)
+        .post(process.env.DB_HOST + "tracks", formData)
         .then((resp) => router.push("/tracks"))
         .catch((e) => console.log(e));
     }

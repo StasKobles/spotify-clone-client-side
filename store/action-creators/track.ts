@@ -6,7 +6,7 @@ import { TrackAction, TrackActionTypes } from "../../types/track";
 export const fetchTracks = () => {
   return async (dispatch: Dispatch<TrackAction>) => {
     try {
-      const response = await axios.get("http://193.201.115.48:4200/tracks");
+      const response = await axios.get(process.env.DB_HOST + "tracks");
       dispatch({ type: TrackActionTypes.FETCH_TRACKS, payload: response.data });
     } catch (e) {
       dispatch({
@@ -20,7 +20,7 @@ export const searchTracks = (query: any) => {
   return async (dispatch: Dispatch<TrackAction>) => {
     try {
       const response = await axios.get(
-        "http://193.201.115.48:4200/tracks/search?query=" + query
+        process.env.DB_HOST + "tracks/search?query=" + query
       );
       dispatch({ type: TrackActionTypes.FETCH_TRACKS, payload: response.data });
     } catch (e) {
