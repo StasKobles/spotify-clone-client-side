@@ -31,7 +31,7 @@ const TrackItem: React.FC<TrackItemProps> = ({ track, active = false }) => {
       <Image
         width={70}
         height={70}
-        src={"http://188.225.14.111:4200/" + track.picture}
+        src={"http://164.92.165.132:4200/" + track.picture}
         alt={"Track logo"}
       />
       <Grid className={styles.descriptionGrid} container direction="column">

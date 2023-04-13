@@ -18,7 +18,7 @@ const TrackPage = ({ serverTrack }: any) => {
   const addComment = async () => {
     try {
       const response = await axios.post(
-        "http://188.225.14.111:4200/tracks/comment",
+        "http://164.92.165.132:4200/tracks/comment",
         {
           username: username.value,
           text: text.value,
@@ -46,7 +46,7 @@ const TrackPage = ({ serverTrack }: any) => {
       </Button>
       <Grid container marginTop={3}>
         <Image
-          src={"http://188.225.14.111:4200/" + track.picture}
+          src={"http://164.92.165.132:4200/" + track.picture}
           width={200}
           height={200}
           alt={"track logo"}
@@ -81,7 +81,7 @@ export default TrackPage;
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const response = await axios.get(
-    "http://188.225.14.111:4200/tracks/" + params?.id
+    "http://164.92.165.132:4200/tracks/" + params?.id
   );
   return {
     props: {

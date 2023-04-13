@@ -26,7 +26,7 @@ const Create = () => {
       formData.append("artist", artist.value);
       formData.append("picture", picture);
       formData.append("audio", audio);
-      await axios.post("http://188.225.14.111:4200/" + "tracks", formData);
+      await axios.post("http://164.92.165.132:4200/" + "tracks", formData);
       await router.push("/tracks");
     }
   };
