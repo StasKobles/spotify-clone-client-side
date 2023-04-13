@@ -12,4 +12,4 @@
 - Adding tracks and comments
 - Simple player (volume, duration and pause)
 - Track page (text, comments and image)
-- Connect witn [server side](https://github.com/StasKobles/spotify-clone-server-side)
+- Connect with [server side](https://github.com/StasKobles/spotify-clone-server-side)
